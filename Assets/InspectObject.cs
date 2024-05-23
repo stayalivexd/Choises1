@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class InspectObject : MonoBehaviour
 {
-
     public Transform objectToInspect; // The object to inspect
     public Transform inspectionView; // The position and rotation to inspect the object from
     public float rotationSpeed = 50f; // The speed of rotation when inspecting the object
+    public GameObject torchLight; // The torch light to toggle
 
     private bool isInspecting = false; // Whether the player is currently inspecting the object
     private Player player; // Reference to the Player script
     private Vector3 originalCameraPosition; // Original position of the camera
     private Quaternion originalCameraRotation; // Original rotation of the camera
     private bool playerIsNear = false; // Whether the player is near the object
-
 
     void Start()
     {
@@ -31,6 +30,13 @@ public class InspectObject : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.E) && isInspecting)
         {
             StopInspecting();
+        }
+        // If the player presses R while inspecting, destroy the object, stop inspecting and toggle the torch light
+        else if (Input.GetKeyDown(KeyCode.R) && isInspecting)
+        {
+            Destroy(objectToInspect.gameObject);
+            StopInspecting();
+            torchLight.SetActive(!torchLight.activeSelf);
         }
 
         // If the player is inspecting the object, allow them to rotate it
@@ -58,6 +64,9 @@ public class InspectObject : MonoBehaviour
 
         // Tell the Player script that we're inspecting an object
         player.StartInspecting(this);
+
+        // Toggle the torch light
+        torchLight.SetActive(true);
     }
 
     void StopInspecting()
@@ -70,6 +79,9 @@ public class InspectObject : MonoBehaviour
 
         // Tell the Player script that we've stopped inspecting an object
         player.StopInspecting();
+
+        // Toggle the torch light
+        torchLight.SetActive(false);
     }
 
     // Add a property to access the isInspecting variable
