@@ -190,11 +190,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9947a6e7e8c8208469c1c86e15f5c089, type: 3}
---- !u!1 &100229889 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 115752, guid: 731670d05affd0045a25600d2045889f, type: 3}
-  m_PrefabInstance: {fileID: 1198660260}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &108421506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9947a6e7e8c8208469c1c86e15f5c089, type: 3}
@@ -350,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.4
+      value: -2.015
       objectReference: {fileID: 0}
     - target: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1776,7 +1771,7 @@ MonoBehaviour:
   objectToInspect: {fileID: 1056462801}
   inspectionView: {fileID: 837941817}
   rotationSpeed: 200
-  torchLight: {fileID: 100229889}
+  torchLight: {fileID: 1490841991}
 --- !u!4 &1056462801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8944904133758079883, guid: 3f7ed2a5772d4e541bf6187f56a3afa1, type: 3}
@@ -2268,6 +2263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 115752, guid: 731670d05affd0045a25600d2045889f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.73
@@ -2375,6 +2374,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9947a6e7e8c8208469c1c86e15f5c089, type: 3}
+--- !u!1 &1490841991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 115752, guid: 731670d05affd0045a25600d2045889f, type: 3}
+  m_PrefabInstance: {fileID: 219588406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1493990796
 PrefabInstance:
   m_ObjectHideFlags: 0
